@@ -13,6 +13,9 @@ Contents:
 
    mailjet
 
+Usage:
+
+.. include:: ../README.rst
 
 Indices and tables
 ==================
