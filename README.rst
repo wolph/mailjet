@@ -3,9 +3,9 @@ Introduction
 
 `mailjet` is a library to access the Mailjet REST API.
 
- - http://www.mailjet.com/
- - http://mailjet.readthedocs.org/en/latest/
- - http://pypi.python.org/pypi/mailjet/
+- http://www.mailjet.com/
+- http://mailjet.readthedocs.org/en/latest/
+- http://pypi.python.org/pypi/mailjet/
 
 Install
 =======
