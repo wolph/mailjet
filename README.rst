@@ -29,7 +29,7 @@ Usage
 To fetch data:
 
     >>> import mailjet
-    >>> print mailjet.Api.user.infos()
+    >>> print mailjet.Api().user.infos()
     {
         u'status': u'OK',
         u'infos': {
@@ -44,6 +44,8 @@ To fetch data:
 
 To put data:
 
+    >>> import mailjet
+    >>> api = mailjet.Api()
     >>> list_ = api.lists.create(label='Test', name='test')
     >>> print list_
     {u'status': u'OK', u'list_id': ...}
