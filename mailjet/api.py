@@ -28,10 +28,18 @@ class ApiMethodFunction(object):
         self.function = function
 
     def __call__(self, **kwargs):
+        if kwargs.pop('method', 'GET') == 'POST':
+            postdata = kwargs
+            options = None
+        else:
+            options = kwargs
+            postdata = None
+
         response = self.method.api.connection.open(
             self.method,
             self.function,
-            postdata=kwargs,
+            options=options,
+            postdata=postdata,
         )
         return json.load(response)
 

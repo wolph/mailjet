@@ -50,6 +50,7 @@ To put data:
     >>> print api.user.addcontact(
         contact='user@domain.com',
         id=list_['list_id'],
+        method='POST',
     )
 
 
