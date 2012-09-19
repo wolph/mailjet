@@ -55,4 +55,23 @@ To put data:
         method='POST',
     )
 
+FAQ
+==========================================
+
+How do I give reserved python keywords as parameters?
+------------------------------------------------------
+
+As expained in #1:
+
+::
+
+    c = dict()
+    c['method'] ='POST'
+    c['subject'] = 'Test'
+    c['list_id'] = list_['list_id']
+    c['lang'] = 'en'
+    c['from'] = 'noreply@foo.com'
+    c['from_name'] = 'foo'
+    c['footer'] = 'default'
+    campaign_ = api.message.createcampaign(**c)
 
