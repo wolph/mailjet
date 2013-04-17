@@ -19,6 +19,12 @@ class Connection(object):
                 self.access_key,
                 self.secret_key,
             )
+            password_mgr.add_password(
+                'Provide an apiKey and secretKey',
+                settings.URL,
+                self.access_key,
+                self.secret_key,
+            )
             # Create a handler for this password manager
             handler = urllib2.HTTPBasicAuthHandler(password_mgr)
             # Create an opener for the handler
