@@ -95,16 +95,16 @@ FAQ
 How do I give reserved python keywords as parameters?
 ------------------------------------------------------
 
-As expained in #1:
+Methods such as creating a campaign require you to use reserved python keywords, such as `from` - hence, in order to overcome this, do the following:
 
 ```py
-c = dict()
-c['method'] ='POST'
-c['subject'] = 'Test'
-c['list_id'] = list_['list_id']
-c['lang'] = 'en'
-c['from'] = 'noreply@foo.com'
-c['from_name'] = 'foo'
-c['footer'] = 'default'
-campaign_ = api.message.createcampaign(**c)
+params = dict()
+params['method'] ='POST'
+params['subject'] = 'My first campaign'
+params['list_id'] = contact_list['list_id']
+params['lang'] = 'en'
+params['from'] = 'noreply@example.com'
+params['from_name'] = 'Your name'
+params['footer'] = 'default'
+campaign = api.message.createcampaign(**params)
 ```
