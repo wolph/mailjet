@@ -42,7 +42,7 @@ clean:
 	-rm -rf $(BUILDDIR)/*
 
 readme:
-	pandoc ../README.md -o ../README.rst
+	which pandoc &> /dev/null && pandoc ../README.md -o ../README.rst
 
 html: readme
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html

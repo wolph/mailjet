@@ -11,11 +11,8 @@ Contents:
 .. toctree::
    :maxdepth: 4
 
+   usage
    mailjet
-
-Usage:
-
-.. include:: ../README.rst
 
 Indices and tables
 ==================
