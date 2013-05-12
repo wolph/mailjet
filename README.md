@@ -1,7 +1,7 @@
 Introduction
 ============
 
-Mailjet is a real-time Cloud Emailing platform and this is a python library to access the [Mailjet Web API](https://mailjet.com/docs/api).
+[Mailjet](http://www.mailjet.com) is a real-time Cloud Emailing platform and this is a python library to access the [Mailjet Web API](https://mailjet.com/docs/api).
 
 Installation
 ============
@@ -20,8 +20,8 @@ The settings can be configured from a Django settings file through
 i.e.
 
 ```py
-export MAILJET_API_KEY=something
-export MAILJET_SECRET_KEY=something_else
+export MAILJET_API_KEY='YOUR_API_KEY'
+export MAILJET_SECRET_KEY='YOUR_SECRET_KEY'
 ```
 
 Alternatively, you can just pass the API key and Secret key as parameters when initializing the mailjet API as follows:
@@ -40,7 +40,7 @@ Usage
 ```py
 import mailjet
 
-mailjet_api = mailjet.Api()
+mailjet_api = mailjet.Api(api_key='YOUR_API_KEY', secret_key='YOUR_SECRET_KEY')
 account_info = mailjet_api.user.infos()
 ```
 
@@ -67,14 +67,14 @@ contact_list = mailjet_api.lists.create(
     label='test',
     name='Test list',
     method='POST'
-    )
+)
 ```
 
 `contact_list` will now contain a dictionary with the status and list id as below:
 
 ```py
 {
-    'status': u'OK',
+    'status': 'OK',
     'contact_id': 000000000
 }
 ```
@@ -97,15 +97,14 @@ How do I give reserved python keywords as parameters?
 
 As expained in #1:
 
-::
-
-    c = dict()
-    c['method'] ='POST'
-    c['subject'] = 'Test'
-    c['list_id'] = list_['list_id']
-    c['lang'] = 'en'
-    c['from'] = 'noreply@foo.com'
-    c['from_name'] = 'foo'
-    c['footer'] = 'default'
-    campaign_ = api.message.createcampaign(**c)
-
+```py
+c = dict()
+c['method'] ='POST'
+c['subject'] = 'Test'
+c['list_id'] = list_['list_id']
+c['lang'] = 'en'
+c['from'] = 'noreply@foo.com'
+c['from_name'] = 'foo'
+c['footer'] = 'default'
+campaign_ = api.message.createcampaign(**c)
+```
