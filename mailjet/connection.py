@@ -3,8 +3,8 @@ import urllib2
 from mailjet.conf import settings
 
 class Connection(object):
-    def __init__(self, access_key=None, secret_key=None, timeout=None):
-        self.access_key = access_key or settings.API_KEY
+    def __init__(self, api_key=None, secret_key=None, timeout=None):
+        self.api_key = api_key or settings.API_KEY
         self.secret_key = secret_key or settings.SECRET_KEY
         self.timeout = timeout or settings.TIMEOUT
         self.opener = None
@@ -16,13 +16,13 @@ class Connection(object):
             password_mgr.add_password(
                 'Mailjet API',
                 settings.URL,
-                self.access_key,
+                self.api_key,
                 self.secret_key,
             )
             password_mgr.add_password(
                 'Provide an apiKey and secretKey',
                 settings.URL,
-                self.access_key,
+                self.api_key,
                 self.secret_key,
             )
             # Create a handler for this password manager
@@ -50,6 +50,6 @@ class Connection(object):
         return opener.open(url, poststring, self.timeout)
 
     @classmethod
-    def get_connection(cls, access_key, secret_key):
-        return Connection(access_key, secret_key)
+    def get_connection(cls, api_key, secret_key):
+        return Connection(api_key, secret_key)
   
