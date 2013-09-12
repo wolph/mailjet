@@ -1,6 +1,14 @@
 mailjet Package
 ===============
 
+:mod:`mailjet` Package
+----------------------
+
+.. automodule:: mailjet
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 :mod:`api` Module
 -----------------
 
@@ -40,4 +48,12 @@ mailjet Package
     :members:
     :undoc-members:
     :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+
+    mailjet.contrib.django_mailjet
+
 

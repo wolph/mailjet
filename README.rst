@@ -71,7 +71,7 @@ Usage
 
     contact_list = mailjet_api.lists.create(
         label='test',
-        name='Test list',
+        name='testlist',  # Only alphanumeric characters are allowed!
         method='POST'
     )
 
@@ -116,4 +116,22 @@ following:
     params['from_name'] = 'Your name'
     params['footer'] = 'default'
     campaign = api.message.createcampaign(**params)
+
+How do I debug errors?
+----------------------
+
+The errors produced by the ``mailjet`` library (or actually, produced by
+the ``urllib2`` library) are still normal http responses. So if you wish
+to read the actual response, do something like this:
+
+.. code:: py
+
+    try:
+        contact_list = api.lists.create(
+            label='test',
+            name='Test list',  # Incorrect because of the space in the name
+            method='POST'
+        )
+    except Exception, e:
+        print 'Mailjet response: %r, %r' % (e, e.read())
 
