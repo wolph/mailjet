@@ -41,3 +41,29 @@ mailjet Package
     :undoc-members:
     :show-inheritance:
 
+`mailjet.contrib.django_mailjet` app
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:mod:`mailjet.contrib.django_mailjet.forms` Module
+--------------------------------------------------
+
+.. automodule:: mailjet.contrib.django_mailjet.forms
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`mailjet.contrib.django_mailjet.views` Module
+--------------------------------------------------
+
+.. automodule:: mailjet.contrib.django_mailjet.views
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`mailjet.contrib.django_mailjet.urls` Module
+--------------------------------------------------
+
+.. automodule:: mailjet.contrib.django_mailjet.urls
+    :members:
+    :undoc-members:
+    :show-inheritance:
