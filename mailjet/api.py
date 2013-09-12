@@ -41,6 +41,10 @@ class ApiMethodFunction(object):
             options=options,
             postdata=postdata,
         )
+
+        if response.msg == u'No Content':
+            return None
+
         return json.load(response)
 
     def __unicode__(self):
