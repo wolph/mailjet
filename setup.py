@@ -8,7 +8,7 @@ else:
 
 setup(
     name = 'mailjet',
-    version = '1.3.1',
+    version = '1.3.2',
     author = 'Rick van Hattem',
     author_email = 'Rick.van.Hattem@Fawo.nl',
     description = '''mailjet is a django app to implement the mailjet REST
