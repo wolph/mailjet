@@ -1,0 +1,12 @@
+{% extends 'newsletter/base.html' %}
+
+{% load i18n %}
+
+{% block body %}
+<form method="post" action="">
+    {{ form.email.errors }}
+    {{ form.email }}
+    {% csrf_token %}
+    <input type="submit" value="{% trans 'Submit' %}" />
+</form>
+{% endblock %}
