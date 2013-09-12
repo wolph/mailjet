@@ -8,8 +8,8 @@ from .forms import SubscriptionForm
 
 class SubscriptionView(generic.FormView):
     form_class = SubscriptionForm
-    template_name = 'newsletter/subscription.html'
-    success_url = reverse_lazy('newsletter_subscription_success')
+    template_name = 'django_mailjet/subscription.html'
+    success_url = reverse_lazy('django_mailjet_subscription_success')
 
     def form_valid(self, form):
         form.save()
