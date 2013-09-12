@@ -43,6 +43,7 @@ clean:
 
 readme:
 	which pandoc &> /dev/null && pandoc ../README.md -o ../README.rst
+	which pandoc &> /dev/null && pandoc ../mailjet/contrib/django_mailjet/README.md -o ../mailjet/contrib/django_mailjet/README.rst
 
 html: readme
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
