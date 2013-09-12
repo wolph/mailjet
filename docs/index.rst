@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 4
 
    usage
+   django
    mailjet
 
 Indices and tables

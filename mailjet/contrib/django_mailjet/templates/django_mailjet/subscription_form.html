@@ -1,11 +1,10 @@
-{% extends 'newsletter/base.html' %}
+{% extends 'django_mailjet/base.html' %}
 
 {% load i18n %}
 
 {% block body %}
 <form method="post" action="">
-    {{ form.email.errors }}
-    {{ form.email }}
+    {{ form.as_p }}
     {% csrf_token %}
     <input type="submit" value="{% trans 'Submit' %}" />
 </form>

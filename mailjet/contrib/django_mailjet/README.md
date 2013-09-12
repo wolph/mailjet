@@ -1,3 +1,6 @@
+Django integration
+------------------
+
 Introduction
 ============
 
@@ -13,11 +16,11 @@ Installation
 
 In `settings.py`:
 
-    - set `MAILJET_LIST_NAME` and `MAILJET_LIST_LABEL`, note that
-      it may not contain non-alphanumeric characters, those are used as
-      defaults for `mailjet.contrib.django_mailjet.forms.SubscriptionForm`,
-    - add to `INSTALLED_APPS`: `mailjet.contrib.django_mailjet`
-      for templates to be loadable.
+- set `MAILJET_LIST_NAME` and `MAILJET_LIST_LABEL`, note that
+  it may not contain non-alphanumeric characters, those are used as
+  defaults for `mailjet.contrib.django_mailjet.forms.SubscriptionForm`,
+- add to `INSTALLED_APPS`: `mailjet.contrib.django_mailjet`
+  for templates to be loadable.
 
 Include `mailjet.contrib.django_mailjet.urls` in `urls.py`, ie.:
 

@@ -56,4 +56,3 @@ Subpackages
 
     mailjet.contrib.django_mailjet
 
-
