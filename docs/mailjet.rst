@@ -54,5 +54,6 @@ Subpackages
 
 .. toctree::
 
+    mailjet.contrib
     mailjet.contrib.django_mailjet
 
