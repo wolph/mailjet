@@ -11,11 +11,9 @@ Contents:
 .. toctree::
    :maxdepth: 4
 
+   usage
+   django
    mailjet
-
-Usage:
-
-.. include:: ../README.rst
 
 Indices and tables
 ==================

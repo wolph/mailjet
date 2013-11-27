@@ -2,9 +2,9 @@ from mailjet.connection import Connection
 import json
 
 class Api(object):
-    def __init__(self, connection=None, access_key=None, secret_key=None):
+    def __init__(self, connection=None, api_key=None, secret_key=None):
         if not connection:
-            connection = Connection.get_connection(access_key, secret_key)
+            connection = Connection.get_connection(api_key, secret_key)
 
         self.connection = connection
 
@@ -46,6 +46,10 @@ class ApiMethodFunction(object):
             options=options,
             postdata=postdata,
         )
+
+        if response.msg == u'No Content':
+            return None
+
         return json.load(response)
 
     def __unicode__(self):
