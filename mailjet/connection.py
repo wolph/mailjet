@@ -2,6 +2,7 @@ import urllib
 import urllib2
 from mailjet.conf import settings
 
+
 class Connection(object):
     def __init__(self, api_key=None, secret_key=None, timeout=None):
         self.api_key = api_key or settings.API_KEY
@@ -52,4 +53,4 @@ class Connection(object):
     @classmethod
     def get_connection(cls, api_key, secret_key):
         return Connection(api_key, secret_key)
-  
+

@@ -1,6 +1,7 @@
 from mailjet.connection import Connection
 import json
 
+
 class Api(object):
     def __init__(self, connection=None, api_key=None, secret_key=None):
         if not connection:
@@ -10,6 +11,7 @@ class Api(object):
 
     def __getattr__(self, method):
         return ApiMethod(self, method)
+
 
 class ApiMethod(object):
     def __init__(self, api, method):
@@ -21,6 +23,7 @@ class ApiMethod(object):
 
     def __unicode__(self):
         return self.method
+
 
 class ApiMethodFunction(object):
     def __init__(self, method, function):

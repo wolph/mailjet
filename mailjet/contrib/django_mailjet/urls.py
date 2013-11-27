@@ -13,7 +13,8 @@ from django.views import generic
 
 import views
 
-urlpatterns = patterns('newsletter.views',
+urlpatterns = patterns(
+    'newsletter.views',
     url(r'subscription/$', views.SubscriptionView.as_view(),
         name='django_mailjet_subscription_form'),
     url(r'subscription/success/$', generic.TemplateView.as_view(

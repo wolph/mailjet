@@ -6,6 +6,7 @@ import mailjet
 
 from .forms import SubscriptionForm
 
+
 class SubscriptionFormTest(TestCase):
     def list_name_and_label(self):
         ts = int(time.time())
@@ -31,11 +32,12 @@ class SubscriptionFormTest(TestCase):
                     self.api.lists.delete(method='POST', id=l['id'])
 
     def test_add_contact(self):
-        form = SubscriptionForm(data={'email': 'james@example.com'},
-            list_name=self.list_name, list_label=self.list_label)
+        form = SubscriptionForm(
+            data={'email': 'james@example.com'}, list_name=self.list_name,
+            list_label=self.list_label)
 
-        self.assertTrue(form.is_valid(),
-            'Form should be valid for test to continue')
+        self.assertTrue(
+            form.is_valid(), 'Form should be valid for test to continue')
 
         form.add_contact()
 
@@ -70,37 +72,43 @@ class SubscriptionFormTest(TestCase):
                     return True
             return False
 
-        form = SubscriptionForm(data={'email': 'james@example.com'},
-            list_name=self.list_name, list_label=self.list_label)
-        self.assertTrue(form.is_valid(),
-            'Form should be valid for test to continue')
-        self.assertFalse(contact_in_list('james@example.com'),
+        form = SubscriptionForm(
+            data={'email': 'james@example.com'}, list_name=self.list_name,
+            list_label=self.list_label)
+        self.assertTrue(
+            form.is_valid(), 'Form should be valid for test to continue')
+        self.assertFalse(
+            contact_in_list('james@example.com'),
             'Contact must not be in list for test to continue')
 
         form.save()
         self.assertTrue(contact_in_list('james@example.com'))
 
-        form = SubscriptionForm(data={'email': 'rick@example.com'},
-            list_name=self.list_name, list_label=self.list_label)
-        self.assertTrue(form.is_valid(),
-            'Form should be valid for test to continue')
-        self.assertFalse(contact_in_list('rick@example.com'),
+        form = SubscriptionForm(
+            data={'email': 'rick@example.com'}, list_name=self.list_name,
+            list_label=self.list_label)
+        self.assertTrue(
+            form.is_valid(), 'Form should be valid for test to continue')
+        self.assertFalse(
+            contact_in_list('rick@example.com'),
             'Contact must not be in list for test to continue')
 
         form.save()
         self.assertTrue(contact_in_list('rick@example.com'))
 
     def test_clean_email(self):
-        form = SubscriptionForm(data={'email': 'james@example.com'},
-            list_name=self.list_name, list_label=self.list_label)
+        form = SubscriptionForm(
+            data={'email': 'james@example.com'}, list_name=self.list_name,
+            list_label=self.list_label)
 
-        self.assertTrue(form.is_valid(),
-            'Form should be valid for test to continue')
+        self.assertTrue(
+            form.is_valid(), 'Form should be valid for test to continue')
 
         form.save()
 
-        form = SubscriptionForm(data={'email': 'james@example.com'},
-            list_name=self.list_name, list_label=self.list_label)
+        form = SubscriptionForm(
+            data={'email': 'james@example.com'}, list_name=self.list_name,
+            list_label=self.list_label)
 
-        self.assertFalse(form.is_valid(),
-            'Form should detect duplicate email')
+        self.assertFalse(
+            form.is_valid(), 'Form should detect duplicate email')

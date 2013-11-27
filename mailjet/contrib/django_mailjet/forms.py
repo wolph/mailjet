@@ -37,8 +37,8 @@ class SubscriptionForm(forms.Form):
 
     def add_contact(self):
         """ Create a contact with using the email on the list. """
-        self.api.lists.addcontact(contact=self.cleaned_data['email'],
-                id=self.list_id, method='POST')
+        self.api.lists.addcontact(
+            contact=self.cleaned_data['email'], id=self.list_id, method='POST')
 
     @property
     def api(self):
@@ -49,7 +49,6 @@ class SubscriptionForm(forms.Form):
             self._api = mailjet.Api()
 
         return self._api
-
 
     @property
     def list_id(self):
@@ -62,7 +61,8 @@ class SubscriptionForm(forms.Form):
                     self._list_id = l['id']
 
             if not getattr(self, '_list_id', None):
-                self._list_id = self.api.lists.create(label=self.list_label,
-                        name=self.list_name, method='POST')['list_id']
+                self._list_id = self.api.lists.create(
+                    label=self.list_label, name=self.list_name,
+                    method='POST')['list_id']
 
         return self._list_id
