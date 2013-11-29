@@ -1,7 +1,5 @@
 from django.views import generic
-from django.conf import settings
-from django.core.urlresolvers import reverse_lazy, reverse
-from django import shortcuts
+from django.core.urlresolvers import reverse_lazy
 
 from .forms import SubscriptionForm
 
