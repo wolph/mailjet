@@ -34,7 +34,7 @@ class ApiMethodFunction(object):
         if kwargs.pop('method', 'GET') == 'POST':
             postdata = kwargs
             for key in postdata:
-                if type(postdata[key])==tuple:
+                if isinstance(postdata[key], tuple):
                     for idx, item in enumerate(postdata[key]):
                         postdata['%s[%d]' % (key, idx)] = item
                     del postdata[key]
