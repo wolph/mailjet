@@ -5,6 +5,20 @@ Introduction
 platform and this is a python library to access the `Mailjet Web
 API <https://mailjet.com/docs/api>`__.
 
+Links
+=====
+
+* Documentation
+    - http://mailjet.readthedocs.org/en/latest/
+* Source
+    - https://github.com/WoLpH/mailjet
+* Bug reports 
+    - https://github.com/WoLpH/mailjet/issues
+* Package homepage
+    - https://pypi.python.org/pypi/mailjet
+* My blog
+    - http://w.wol.ph/
+
 Installation
 ============
 
