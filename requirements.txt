@@ -1,4 +1,4 @@
-Django==1.8.1
+Django==1.8.2
 Jinja2==2.7.3
 MarkupSafe==0.23
 Pygments==2.0.2
@@ -13,3 +13,4 @@ pytest-cache==1.0
 pytest-flakes==0.2
 pytest-pep8==1.0.6
 wsgiref==0.1.2
+flake8
