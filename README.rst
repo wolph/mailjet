@@ -5,20 +5,6 @@ Introduction
 platform and this is a python library to access the `Mailjet Web
 API <https://mailjet.com/docs/api>`__.
 
-Links
-=====
-
-* Documentation
-    - http://mailjet.readthedocs.org/en/latest/
-* Source
-    - https://github.com/WoLpH/mailjet
-* Bug reports 
-    - https://github.com/WoLpH/mailjet/issues
-* Package homepage
-    - https://pypi.python.org/pypi/mailjet
-* My blog
-    - http://w.wol.ph/
-
 Installation
 ============
 
@@ -129,7 +115,7 @@ following:
     params['from'] = 'noreply@example.com'
     params['from_name'] = 'Your name'
     params['footer'] = 'default'
-    campaign = api.message.createcampaign(**params)
+    campaign = mailjet_api.message.createcampaign(**params)
 
 How do I debug errors?
 ----------------------
@@ -141,11 +127,10 @@ to read the actual response, do something like this:
 .. code:: py
 
     try:
-        contact_list = api.lists.create(
+        contact_list = mailjet_api.lists.create(
             label='test',
             name='Test list',  # Incorrect because of the space in the name
             method='POST'
         )
     except Exception, e:
         print 'Mailjet response: %r, %r' % (e, e.read())
-
