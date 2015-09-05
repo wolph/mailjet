@@ -106,7 +106,7 @@ params['lang'] = 'en'
 params['from'] = 'noreply@example.com'
 params['from_name'] = 'Your name'
 params['footer'] = 'default'
-campaign = api.message.createcampaign(**params)
+campaign = mailjet_api.message.createcampaign(**params)
 ```
 
 How do I debug errors?
@@ -117,7 +117,7 @@ So if you wish to read the actual response, do something like this:
 
 ```py
 try:
-    contact_list = api.lists.create(
+    contact_list = mailjet_api.lists.create(
         label='test',
         name='Test list',  # Incorrect because of the space in the name
         method='POST'
