@@ -1,4 +1,4 @@
-Django==1.8.4
+Django==1.8.7
 Jinja2==2.8
 MarkupSafe==0.23
 Pygments==2.0.2
@@ -8,7 +8,7 @@ execnet==1.4.1
 pep8==1.6.2
 py==1.4.30
 pyflakes==1.0.0
-pytest==2.8.1
+pytest==2.8.3
 pytest-cache==1.0
 pytest-flakes==1.0.1
 pytest-pep8==1.0.6
