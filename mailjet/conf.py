@@ -153,5 +153,6 @@ class Settings(object):
             pprint.pformat(self._settings_cache),
         )
 
+
 settings = Settings()
 
