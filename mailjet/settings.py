@@ -13,7 +13,7 @@ variable. These settings can be overwritten by modifying the Django settings
 '''The timeout for the POST/GET requests'''
 # TIMEOUT = 10
 
-'''The API version, currently only 0.1 is suported'''
+'''The API version, currently only 0.1 is supported'''
 # VERSION = 0.1
 
 '''The url to fetch from, this is based on the version but this is not

@@ -57,7 +57,7 @@ Usage
     mailjet_api = mailjet.Api(api_key='YOUR_API_KEY', secret_key='YOUR_SECRET_KEY')
     account_info = mailjet_api.user.infos()
 
-``acount_info`` would now be assigned the following python dict:
+``account_info`` would now be assigned the following python dict:
 
 .. code:: py
 
